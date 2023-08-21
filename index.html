@@ -1,36 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html data-theme="light" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>85 Summer Sale</title>
-    <!-- css  -->
-    <link rel="stylesheet" href="style.css">
-     <!-- font awesome  -->
-     <script src="https://kit.fontawesome.com/1ec1b6611d.js" crossorigin="anonymous"></script>
-    <!-- font family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-         * {
-            box-sizing: border-box;
-        }
-
-        .font-sans
-        {
-            font-family: 'Work Sans', sans-serif;
-        }     
-    </style>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>summer sale</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
     <!-- banner section -->
-    <header>
+    <section class="bg-[#F9F6E2] mb-8">
+        <div
+            class="flex flex-col-reverse justify-center items-center sm:flex-row sm:w-full md:max-w-3xl lg:max-w-4xl xl:max-w-6xl mx-auto">
+            <div class="flex flex-1 flex-col items-center gap-6 text-center">
+                <h5 class="font-medium text-lg">---SALE FEVER---</h5>
+                <h1 class="font-bold text-3xl sm:text-3xl md:text-2xl lg:text-4xl">
+                    Purchase TK 200 or <br />above &amp; get
+                    <span class="text-[#E527B2]">20% off</span>
+                </h1>
+                <p class="font-medium text-base">
+                    <span>Use Promo Code</span><button
+                        class="px-3 py-1 text-white rounded ml-1 bg-[#E527B2] mb-6 sm:mb-0">
+                        SELL200
+                    </button>
+                </p>
+            </div>
+            <div class="flex flex-1 justify-center items-center">
+                <img src="images/Summer 1.png" alt="Summer Sale Offer logo" class="w-4/5" />
+            </div>
+        </div>
+    </section>
+    <!-- cards and cart section -->
+    <section class="px-8 flex flex-col lg:flex-row justify-center gap-6">
+        <!-- cards -->
+        <div class="w-[70%]">
+            <div>
+                <h2>Kitchenware</h2>
+                <div>
+                    <div class="p-5 border rounded-2">
+                        <img src="./images/prod1.png" alt="" class="bg-[#1111110D]">
+                    </div>
 
-    </header>
+                </div>
+            </div>
+        </div>
+        <!-- carts  -->
+        <div class="w-[30%]">
+            <h2>this is cart</h2>
+        </div>
+    </section>
 </body>
 
 </html>
