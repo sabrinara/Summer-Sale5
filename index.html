@@ -1,248 +1,373 @@
 <!DOCTYPE html>
-<html data-theme="light" lang="en">
-
-<head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>summer sale</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <title>Summer Sale</title>
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- font awesome  -->
-    <script src="https://kit.fontawesome.com/1ec1b6611d.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/1ec1b6611d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-    <!-- banner section -->
+  <body class="bg-slate-50">
+    <!-- Banner Area -->
+    <header class="bg-[#F9F6E2] px-2 lg:px-0 ">
+      <section
+        class="flex flex-col items-center gap-y-10 md:flex-row md:items-center md:justify-center gap-20 py-5 max-w-7xl mx-auto"
+      >
+        <div class="left text-center ">
+          <h2 class="text-[#111111] text-lg font-semibold">---SALE FEVER---</h2>
+          <h1
+            class="text-[#111111] text-3xl max-w-[330px] sm:text-4xl sm:max-w-[400px] md:text-5xl font-bold md:max-w-[470px] my-5"
+          >
+            Purchase TK 200 or above & get
+            <span class="text-[#E527B2]">20% off</span>
+          </h1>
+          <p class="text-base font-semibold mt-8">
+            Use Promo Code
+            <span class="text-white bg-[#E527B2] px-5 py-2 rounded-lg ml-5"
+              >SELL200</span
+            >
+          </p>
+        </div>
 
+        <div class="right w-2/6">
+          <img src="images/Summer 1.png" alt="" class="w-full" />
+        </div>
+      </section>
+    </header>
 
-    <section class="bg-[#F9F6E2]">
-        <div
-            class="flex flex-col-reverse justify-center items-center sm:flex-row sm:w-full md:max-w-3xl lg:max-w-4xl xl:max-w-6xl mx-auto">
-            <div class="flex flex-1 flex-col items-center gap-6 text-center">
-                <h5 class="font-medium text-lg">---SALE FEVER---</h5>
-                <h1 class="font-bold text-3xl sm:text-3xl md:text-2xl lg:text-4xl">
-                    Purchase TK 200 or <br />above &amp; get
-                    <span class="text-[#E527B2]">20% off</span>
-                </h1>
-                <p class="font-medium text-base">
-                    <span>Use Promo Code</span><button
-                        class="px-3 py-1 text-white rounded ml-1 bg-[#E527B2] mb-6 sm:mb-0">
-                        SELL200
-                    </button>
+    <main
+      class="max-w-7xl mx-auto flex flex-col sm:flex-row gap-5 sm:justify-between px-2 lg:px-0 pb-10"
+    >
+      <!-- CARDS -->
+      <section>
+        <!-- Kitchenware -->
+        <section class="pt-10">
+          <h2 class="text-[#111111] text-xl font-bold p-4">Kitchenware</h2>
+          <div class="flex flex-wrap justify-center gap-5">
+            <div
+              onclick="addProductEntry('K. Accessories'); addToTotal(39)"
+              class="product-item product card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer"
+            >
+              <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg">
+                <img src="images/prod1.png" alt="" />
+              </figure>
+              <div class="card-body p-0">
+                <div class="rating mx-auto mt-5">
+                  <div
+                    class="flex felx-row justify-center items-center w-20 text-yellow-400"
+                  >
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <h2 class="card-title mx-auto text-black">K. Accessories</h2>
+                <p class="text-lg text-slate-400">
+                  <span id="product-price">39.00</span> TK
                 </p>
+              </div>
             </div>
-            <div class="flex flex-1 justify-center items-center">
-                <img src="images/Summer 1.png" alt="Summer Sale Offer logo" class="w-4/5" />
-            </div>
-        </div>
-    </section>
 
-
-    <!-- cards and cart section -->
-    <section class="px-8 flex flex-col lg:flex-row justify-center gap-6 bg-[#1111110D]">
-        <!-- cards -->
-        <div class="w-[70%] ">
-            <div class="mt-14" >
-                <h2 class="font-bold text-2xl mb-6">Kitchenware</h2>
-                <div  class="flex gap-5 flex-col justify-between items-stretch sm:flex-row ">
-                    <div onclick="item1()"
-                        class="flex md:flex-1 flex-col items-center justify-center gap-2 bg-white p-3 shadow-md rounded-md">
-                        <div
-                            class="px-10 md:py-4 md:px-6 lg:py-6 lg:px-8 xl:px-16 flex justify-center items-center bg-gray-100 rounded-sm">
-                            <img src="images/prod1.png" class="h-32">
-                        </div>
-                        <div class="flex felx-row justify-center items-center w-20 text-yellow-400">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <h4 class="font-semibold text-xs">Single Relax Chair</h4>
-                        <h4 class="text-xs font-extralight text-gray-500">185.00 TK</h4>
-                    </div>
-                    <div onclick="item2()"
-                        class="flex md:flex-1 flex-col items-center justify-center gap-2 bg-white p-3 shadow-md rounded-md">
-                        <div
-                            class="px-10 md:py-4 md:px-6 lg:py-6 lg:px-8 xl:px-16 flex justify-center items-center bg-gray-100 rounded-sm">
-                            <img src="images/prod2.png" class="h-32">
-                        </div>
-                        <div class="flex felx-row justify-center items-center w-20 text-yellow-400">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <h4 class="font-semibold text-xs">Single Relax Chair</h4>
-                        <h4 class="text-xs font-extralight text-gray-500">1000.00 TK</h4>
-                    </div>
-                    <div onclick="item3()"
-                        class="flex md:flex-1 flex-col items-center justify-center gap-2 bg-white p-3 shadow-md rounded-md">
-                        <div
-                            class="px-10 md:py-4 md:px-6 lg:py-6 lg:px-8 xl:px-16 flex justify-center items-center bg-gray-100 rounded-sm">
-                            <img src="images/prod3.png" class="h-32">
-                        </div>
-                        <div class="flex felx-row justify-center items-center w-20 text-yellow-400">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <h4 class="font-semibold text-xs">Single Relax Chair</h4>
-                        <h4 class="text-xs font-extralight text-gray-500">150.00 TK</h4>
-                    </div>
+            <div
+              onclick="addProductEntry('K. Accessories'); addToTotal(25)"
+              class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer"
+            >
+              <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg">
+                <img src="images/prod2.png" alt="" />
+              </figure>
+              <div class="card-body p-0">
+                <div class="rating mx-auto mt-5">
+                  <div
+                    class="flex felx-row justify-center items-center w-20 text-yellow-400"
+                  >
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
                 </div>
+                <h2 class="card-title mx-auto text-black">K. Accessories</h2>
+                <p class="text-lg text-slate-400"><span>25.00</span> TK</p>
+              </div>
+            </div>
 
-            </div >
-            <div class="mt-14">
-                <h2 class="font-bold text-2xl mb-6">Sportsware</h2>
-                <div  class="flex gap-5 flex-col justify-between items-stretch sm:flex-row ">
-                    <div onclick="item4()"
-                        class="flex md:flex-1 flex-col items-center justify-center gap-2 bg-white p-3 shadow-md rounded-md">
-                        <div
-                            class="px-10 md:py-4 md:px-6 lg:py-6 lg:px-8 xl:px-16 flex justify-center items-center bg-gray-100 rounded-sm">
-                            <img src="images/prod4.png" class="h-32">
-                        </div>
-                        <div class="flex felx-row justify-center items-center w-20 text-yellow-400">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <h4 class="font-semibold text-xs">Single Relax Chair</h4>
-                        <h4 class="text-xs font-extralight text-gray-500">50.00 TK</h4>
-                    </div>
-                    <div onclick="item5()"
-                        class="flex md:flex-1 flex-col items-center justify-center gap-2 bg-white p-3 shadow-md rounded-md">
-                        <div
-                            class="px-10 md:py-4 md:px-6 lg:py-6 lg:px-8 xl:px-16 flex justify-center items-center bg-gray-100 rounded-sm">
-                            <img src="images/prod5.png" class="h-32">
-                        </div>
-                        <div class="flex felx-row justify-center items-center w-20 text-yellow-400">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <h4 class="font-semibold text-xs">Single Relax Chair</h4>
-                        <h4 class="text-xs font-extralight text-gray-500">2000.00 TK</h4>
-                    </div>
-                    <div onclick="item6()"
-                        class="flex md:flex-1 flex-col items-center justify-center gap-2 bg-white p-3 shadow-md rounded-md">
-                        <div
-                            class="px-10 md:py-4 md:px-6 lg:py-6 lg:px-8 xl:px-16 flex justify-center items-center bg-gray-100 rounded-sm">
-                            <img src="images/prod6.png" class="h-32">
-                        </div>
-                        <div class="flex felx-row justify-center items-center w-20 text-yellow-400">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <h4 class="font-semibold text-xs">Single Relax Chair</h4>
-                        <h4 class="text-xs font-extralight text-gray-500">1200.00 TK</h4>
-                    </div>
+            <div
+              onclick="addProductEntry('Home Cooker'); addToTotal(49)"
+              class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer"
+            >
+              <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg">
+                <img src="images/prod3.png" alt="" />
+              </figure>
+              <div class="card-body p-0">
+                <div class="rating mx-auto mt-5">
+                  <div
+                    class="flex felx-row justify-center items-center w-20 text-yellow-400"
+                  >
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
                 </div>
+                <h2 class="card-title mx-auto text-black">Home Cooker</h2>
+                <p class="text-lg text-slate-400"><span>49.00</span> TK</p>
+              </div>
             </div>
-            <div class="mt-14">
-                <h2 class="font-bold text-2xl mb-6">Furnitures</h2>
-                <div  class="flex gap-5 flex-col justify-between items-stretch sm:flex-row ">
-                    <div onclick="item7()"
-                        class="flex md:flex-1 flex-col items-center justify-center gap-2 bg-white p-3 shadow-md rounded-md">
-                        <div
-                            class="px-10 md:py-4 md:px-6 lg:py-6 lg:px-8 xl:px-16 flex justify-center items-center bg-gray-100 rounded-sm">
-                            <img src="images/prod7.png" class="h-32">
-                        </div>
-                        <div class="flex felx-row justify-center items-center w-20 text-yellow-400">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <h4 class="font-semibold text-xs">Single Relax Chair</h4>
-                        <h4 class="text-xs font-extralight text-gray-500">6000.00 TK</h4>
-                    </div>
-                    <div onclick="item8()"
-                        class="flex md:flex-1 flex-col items-center justify-center gap-2 bg-white p-3 shadow-md rounded-md">
-                        <div
-                            class="px-10 md:py-4 md:px-6 lg:py-6 lg:px-8 xl:px-16 flex justify-center items-center bg-gray-100 rounded-sm">
-                            <img src="images/prod8.png" class="h-32">
-                        </div>
-                        <div class="flex felx-row justify-center items-center w-20 text-yellow-400">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <h4 class="font-semibold text-xs">Single Relax Chair</h4>
-                        <h4 class="text-xs font-extralight text-gray-500">4500 TK</h4>
-                    </div>
-                    <div onclick="item9()"
-                        class="flex md:flex-1 flex-col items-center justify-center gap-2 bg-white p-3 shadow-md rounded-md">
-                        <div
-                            class="px-10 md:py-4 md:px-6 lg:py-6 lg:px-8 xl:px-16 flex justify-center items-center bg-gray-100 rounded-sm">
-                            <img src="images/prod9.png" class="h-32">
-                        </div>
-                        <div class="flex felx-row justify-center items-center w-20 text-yellow-400">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <h4 class="font-semibold text-xs">Single Relax Chair</h4>
-                        <h4 class="text-xs font-extralight text-gray-500">10000 TK</h4>
-                    </div>
+          </div>
+        </section>
+
+        <!-- Sportswear -->
+        <section class="pt-10">
+          <h2 class="text-[#111111] text-xl font-bold p-4">Sportswear</h2>
+          <div class="flex flex-wrap justify-center gap-5">
+            <div
+              onclick="addProductEntry('Sports Back Cap'); addToTotal(49)"
+              class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer"
+            >
+              <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg">
+                <img src="images/prod4.png" alt="" />
+              </figure>
+              <div class="card-body p-0">
+                <div class="rating mx-auto mt-5">
+                  <div
+                    class="flex felx-row justify-center items-center w-20 text-yellow-400"
+                  >
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
                 </div>
-
+                <h2 class="card-title mx-auto text-black">Sports Back Cap</h2>
+                <p class="text-lg text-slate-400"><span>49.00</span> TK</p>
+              </div>
             </div>
-             
-        </div>
-        
-      <!-- carts  -->
-      <div class="cart md:w-[30%] lg:w-[25%] m-0 md:m-5 md:mt-14 ">
-        <div class="p-5 space-y-2 bg-white rounded-md shadow-md mb-5">
-            <h3 class="font-medium text-lg">Have coupon?</h3>
-            <div class="flex flex-row justify-between rounded-lg border border-gray-200">
-                <input type="text" name="" id="couponId" placeholder="Coupon code" class="rounded-lg flex-1 px-4 lg:px-3 py-2 w-[60%] placeholder:text-xs border-0 outline-0   " wfd-id="id0">
-                <button id="sell200-btn" class="px-4 py-2 text-xs opacity-40 pointer-events-none bg-[#E527B2] hover:bg-pink-500 text-white rounded-r-lg">Apply</button>
+            <div
+              onclick="addProductEntry('Full Jersey Set'); addToTotal(69)"
+              class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer"
+            >
+              <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg">
+                <img src="images/prod5.png" alt="" />
+              </figure>
+              <div class="card-body p-0">
+                <div class="rating mx-auto mt-5">
+                  <div
+                    class="flex felx-row justify-center items-center w-20 text-yellow-400"
+                  >
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <h2 class="card-title mx-auto text-black">Full Jersey Set</h2>
+                <p class="text-lg text-slate-400"><span>69.00</span> TK</p>
+              </div>
             </div>
-        </div>
-        <div class="p-5 bg-white shadow-md">
-            <ol id="cartList" class="list-decimal list-inside space-y-2 font-semibold">
-            </ol>
-            <div class="bg-gray-700 w-[95%] mx-auto border my-2"></div>
-            <ul class="list-none space-y-2">
-                <li><span class="font-semibold">Total price: </span>
-                    <span id="priceId" class="font-semibold text-gray-400">00
-                    </span>
-                </li>
-                <li><span class="font-semibold">Discount: </span>
-                    <span id="discountId" class="font-semibold text-gray-400">00
-                    </span>
-                </li>
-                <li><span class="font-semibold">Total: </span>
-                    <span id="totalPriceId" class="font-semibold text-gray-400">00
-                    </span>
-                </li>
-            </ul>
-            <div class="bg-gray-700 w-[95%] mx-auto border my-2"></div>
-            <button id="purchase-btn" class="font-medium text-white opacity-40 pointer-events-none bg-[#E527B2] w-full py-1 text-sm rounded-md hover:bg-pink-500">Make
-                Purchase</button>
-        </div>
-    </div>
-    </section>
-    <script src="app.js">
+            <div
+              onclick="addProductEntry('Sports cates'); addToTotal(159)"
+              class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer"
+            >
+              <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg">
+                <img src="images/prod6.png" alt="" />
+              </figure>
+              <div class="card-body p-0">
+                <div class="rating mx-auto mt-5">
+                  <div
+                    class="flex felx-row justify-center items-center w-20 text-yellow-400"
+                  >
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <h2 class="card-title mx-auto text-black">Sports cates</h2>
+                <p class="text-lg text-slate-400"><span>159.00</span> TK</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-    </script>
-</body>
+        <!-- Furniture -->
+        <section class="pt-10">
+          <h2 class="text-[#111111] text-xl font-bold p-4">Furniture</h2>
+          <div class="flex flex-wrap justify-center gap-5">
+            <div
+              onclick="addProductEntry('Single Relax Chair'); addToTotal(185)"
+              class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer"
+            >
+              <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg">
+                <img src="images/prod7.png" alt="" />
+              </figure>
+              <div class="card-body p-0">
+                <div class="rating mx-auto mt-5">
+                  <div
+                    class="flex felx-row justify-center items-center w-20 text-yellow-400"
+                  >
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <h2 class="card-title mx-auto text-black">Single Relax Chair</h2>
+                <p class="text-lg text-slate-400"><span>185.00</span> TK</p>
+              </div>
+            </div>
+            <div
+              onclick="addProductEntry('Children play'); addToTotal(299)"
+              class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer"
+            >
+              <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg">
+                <img src="images/prod8.png" alt="" />
+              </figure>
+              <div class="card-body p-0">
+                <div class="rating mx-auto mt-5">
+                  <div
+                    class="flex felx-row justify-center items-center w-20 text-yellow-400"
+                  >
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <h2 class="card-title mx-auto text-black">Children play</h2>
+                <p class="text-lg text-slate-400"><span>299.00</span> TK</p>
+              </div>
+            </div>
+            <div
+              onclick="addProductEntry('Flexible Sofa'); addToTotal(399)"
+              class="card w-[280px] bg-base-100 shadow-xl text-center px-4 py-8 bg-white cursor-pointer"
+            >
+              <figure class="w-4/5 mx-auto bg-slate-50 p-5 rounded-lg">
+                <img src="images/prod9.png" alt="" />
+              </figure>
+              <div class="card-body p-0">
+                <div class="rating mx-auto mt-5">
+                  <div
+                    class="flex felx-row justify-center items-center w-20 text-yellow-400"
+                  >
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <h2 class="card-title mx-auto text-black">Flexible Sofa</h2>
+                <p class="text-lg text-slate-400"><span>339.00</span> TK</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Cart Container -->
+      <section class="text-left mt-20 pt-1">
+        <div class="top bg-white p-4 rounded-lg mb-5">
+          <p class="text-lg font-bold text-[#111111]">Have coupon?</p>
+          <div class="flex my-4">
+            <input
+              type="text"
+              id="coupon-input"
+              placeholder="Coupon Code"
+              class="px-4 py-2 bg-transparent border rounded-tl-lg rounded-bl-lg"
+            />
 
+            <button
+              id="apply-btn"
+              class="text-white font-bold bg-[#E527B2] px-4 py-2 rounded-tr-lg rounded-br-lg"
+              onclick="applyCoupon()"
+              disabled
+            >
+              Apply
+            </button>
+          </div>
+        </div>
+
+        <div class="bottom bg-white p-4 rounded-lg">
+          <div id="cart-product-list" class="text-lg font-semibold"></div>
+          <div class="w-full h-[1px] bg-slate-200 my-2"></div>
+          <div>
+            <p class="text-lg font-bold">
+              Total Price :
+              <span class="font-normal text-slate-400" id="main-total-price"
+                >00</span
+              ><span class="font-normal text-slate-400"> TK</span>
+            </p>
+
+            <p class="text-lg font-bold">
+              Discount :
+              <span class="font-normal text-slate-400" id="discount-amount"
+                >00</span
+              ><span class="font-normal text-slate-400"> TK</span>
+            </p>
+
+            <p class="text-lg font-bold">
+              Total :
+              <span
+                class="font-normal text-slate-400"
+                id="discounted-total-price"
+                >00</span
+              ><span class="font-normal text-slate-400"> TK</span>
+            </p>
+          </div>
+          <div class="w-full h-[1px] bg-slate-200 my-2"></div>
+          <div>
+            <button
+              id="purchase-btn"
+              disabled
+              class="text-white font-bold bg-[#E527B2] px-4 py-2 rounded-lg w-[90%] mx-4 btn"
+              onclick="my_modal_2.showModal()"
+            >
+              Make Purchase
+            </button>
+            <dialog id="my_modal_2" class="modal">
+              <form
+                method="dialog"
+                class="modal-box bg-white text-center py-14"
+              >
+                <img src="images/congo.png" alt="" class="w-1/4 mx-auto" />
+                <h3 class="font-bold text-3xl mt-4">Congratulations</h3>
+                <p class="py-4 text-slate-400">Your Purchase the product</p>
+
+                <button
+                  id="go-home-btn"
+                  class="text-white font-bold bg-[#E527B2] px-4 py-2 rounded-lg mx-4"
+                >
+                  Go Home
+                </button>
+              </form>
+              <form method="dialog" class="modal-backdrop">
+                <button>close</button>
+              </form>
+            </dialog>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="scripts.js"></script>
+  </body>
 </html>
